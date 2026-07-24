@@ -2,8 +2,9 @@
 
 # 🎨 ArtHub
 
-### *Discover, Collect & Empower Creativity.*
-### *Where Artists Meet Collectors.*
+### _Discover, Collect & Empower Creativity._
+
+### _Where Artists Meet Collectors._
 
 <br/>
 
@@ -13,18 +14,6 @@
 [![MongoDB](https://img.shields.io/badge/MongoDB-Atlas-47A248?style=for-the-badge&logo=mongodb)](https://mongodb.com/)
 [![Stripe](https://img.shields.io/badge/Stripe-Payments-635BFF?style=for-the-badge&logo=stripe)](https://stripe.com/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.x-38B2AC?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
-
-<br/>
-
-[![MIT License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
-[![Vercel](https://img.shields.io/badge/Deployed_on-Vercel-black?style=flat-square&logo=vercel)](https://arthub-by-abid.vercel.app)
-[![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-brightgreen?style=flat-square)](https://github.com/Abid-Hossain-Sifat/ArtHub/pulls)
-
-<br/>
-
-[🌐 Live Demo](https://arthub-by-abid.vercel.app) &nbsp;|&nbsp;
-[📁 Frontend Repo](https://github.com/Abid-Hossain-Sifat/ArtHub) &nbsp;|&nbsp;
-[🔧 Backend Repo](https://github.com/Abid-Hossain-Sifat/ArtHub-Server)
 
 </div>
 
@@ -41,9 +30,11 @@ Built with **Next.js 19**, **Express 5**, **MongoDB Atlas**, and **BetterAuth**,
 ## 💡 Why ArtHub?
 
 ### The Problem
+
 The traditional art market is inaccessible, opaque, and gatekept by galleries and intermediaries. Independent artists struggle to reach global buyers, and collectors have no reliable, curated digital space to discover and purchase authentic art.
 
 ### The Solution
+
 ArtHub democratizes art commerce by:
 
 - Giving **artists** a self-managed storefront to list, price, and sell their work directly
@@ -52,6 +43,7 @@ ArtHub democratizes art commerce by:
 - Eliminating intermediaries through **direct Stripe payments** from buyer to platform
 
 ### Why It Was Built
+
 ArtHub was developed as a demonstration of production-level full-stack engineering — showcasing real-world patterns like JWT-based auth, webhook-driven payment processing, role-based access control, subscription management, and Recharts-powered analytics dashboards.
 
 ---
@@ -59,6 +51,7 @@ ArtHub was developed as a demonstration of production-level full-stack engineeri
 ## 🔑 Key Features
 
 ### 🔐 Authentication & Authorization
+
 - Email/password sign-up and login powered by **BetterAuth**
 - **Google OAuth 2.0** social login via BetterAuth social providers
 - **JWT tokens** with 7-day expiry and cookie-cached sessions
@@ -66,6 +59,7 @@ ArtHub was developed as a demonstration of production-level full-stack engineeri
 - Role-based access control enforced on both frontend and backend
 
 ### 🎨 Artwork Management
+
 - Artists can **add artworks** with title, category, description, price, and image upload
 - Custom or predefined **artwork categories**
 - Artists can **edit** and **delete** their own listings
@@ -73,6 +67,7 @@ ArtHub was developed as a demonstration of production-level full-stack engineeri
 - Artwork detail pages with full info and buyer comments
 
 ### 💳 Stripe Payment Integration
+
 - **Stripe Checkout Sessions** for one-time artwork purchases
 - **Stripe Checkout Sessions** for subscription plan upgrades
 - **Stripe Webhook** (`checkout.session.completed`) for reliable post-payment processing
@@ -80,57 +75,67 @@ ArtHub was developed as a demonstration of production-level full-stack engineeri
 - Payment success and cancellation pages with session verification
 
 ### 📦 Subscription System
-| Plan    | Monthly Purchase Limit | Price   |
-|---------|------------------------|---------|
-| Free    | 3 artworks/month       | $0      |
-| Pro     | 9 artworks/month       | $9.99   |
-| Premium | Unlimited              | $19.99  |
+
+| Plan    | Monthly Purchase Limit | Price  |
+| ------- | ---------------------- | ------ |
+| Free    | 3 artworks/month       | $0     |
+| Pro     | 9 artworks/month       | $9.99  |
+| Premium | Unlimited              | $19.99 |
 
 - Monthly purchase counters **auto-reset** at the start of each month
 - Subscription history tracked per user with plan transitions logged
 
 ### 💬 Comments System
+
 - Buyers (role: `user`) can leave comments on artwork detail pages
 - Comments are **role-restricted** — artists and admins cannot comment
 - Comment data includes user name, avatar, and timestamp
 - Comments displayed in reverse-chronological order
 
 ### 🔍 Search, Filter & Sort
+
 - **Search** artworks by title or artist name (regex-based, case-insensitive)
 - **Filter** by category and availability status
 - **Sort** by: A-Z, Z-A, Price Low to High, Price High to Low, Newest First
 - All filters work together via a combined query pipeline on the backend
 
 ### 📄 Pagination
+
 - Server-side pagination with configurable page size (default: 12 per page)
 - Returns `totalCount`, `totalPages`, and `currentPage` for frontend pagination controls
 
 ### 📊 Analytics Dashboard
+
 - Admin **daily revenue chart** (artwork purchases + subscriptions) using **Recharts**
 - Artist **sales statistics** (total artworks, sold artworks)
 - Admin **all-transactions table** combining purchase and subscription history
 
 ### 🎞️ Animations
+
 - **Framer Motion** animations throughout — page transitions, card entrances, staggered lists, dropdown menus
 - Animated hero banner with auto-sliding slides
 - Spring-physics-based card animations on artwork grids
 
 ### 💀 Skeleton Loading
+
 - Custom skeleton components for all major sections: artwork cards, forms, subscription plans, profile pages
 - Smooth loading state prevents layout shift
 
 ### 🚨 Error Handling
+
 - Custom `not-found.jsx` (404) page
 - `unauthorized` page for role-mismatch redirects
 - Toast notifications (`react-hot-toast` & `react-toastify`) for all user actions
 - Server-side validation with descriptive error messages
 
 ### 🖼️ Image Upload
+
 - Artwork images and profile pictures uploaded via **ImgBB API**
 - Image preview before upload
 - Fallback avatar system for users without profile pictures
 
 ### 👤 Profile Management
+
 - Users can update their **name, email, and avatar**
 - Profile updates **cascade** across all related collections: artworks, purchases, comments, and subscription history
 
@@ -139,7 +144,9 @@ ArtHub was developed as a demonstration of production-level full-stack engineeri
 ## 👥 User Roles
 
 ### 🛍️ Buyer (role: `user`)
+
 The default role assigned to every new signup. Buyers can:
+
 - Browse and search artworks
 - Purchase artworks (within their monthly subscription limit)
 - Leave comments on artwork pages
@@ -148,7 +155,9 @@ The default role assigned to every new signup. Buyers can:
 - Manage their profile
 
 ### 🎨 Artist (role: `artist`)
+
 Promoted from Buyer by an Admin. Artists can:
+
 - Add new artworks with images, descriptions, categories, and pricing
 - Edit and delete their own artwork listings
 - View their sales history (who bought what)
@@ -157,7 +166,9 @@ Promoted from Buyer by an Admin. Artists can:
 - **Cannot** purchase artworks or leave comments
 
 ### 🛡️ Admin (role: `admin`)
+
 The platform administrator. Admins can:
+
 - View and manage all users (change roles)
 - View and manage all artworks across the platform
 - Access all transaction data (purchases + subscriptions)
@@ -168,21 +179,21 @@ The platform administrator. Admins can:
 
 ## 🛠️ Technology Stack
 
-| Category         | Technology                              |
-|------------------|-----------------------------------------|
-| **Frontend**     | Next.js 16.2.9 (App Router), React 19  |
-| **Backend**      | Node.js, Express 5.x                   |
-| **Database**     | MongoDB Atlas (Native Driver)           |
-| **Authentication** | BetterAuth v1.6.19 (JWT + Google OAuth) |
-| **Payment**      | Stripe (Checkout Sessions + Webhooks)   |
-| **Image Hosting** | ImgBB API                              |
-| **Animations**   | Framer Motion 12.x                      |
-| **Charts**       | Recharts 3.x                            |
-| **UI Framework** | Tailwind CSS 4.x + DaisyUI 5.x         |
-| **Icons**        | Lucide React, React Icons               |
-| **Notifications** | React Hot Toast, React Toastify        |
-| **Deployment**   | Vercel (Frontend + Backend)             |
-| **State Management** | React Hooks (useState, useEffect)  |
+| Category             | Technology                              |
+| -------------------- | --------------------------------------- |
+| **Frontend**         | Next.js 16.2.9 (App Router), React 19   |
+| **Backend**          | Node.js, Express 5.x                    |
+| **Database**         | MongoDB Atlas (Native Driver)           |
+| **Authentication**   | BetterAuth v1.6.19 (JWT + Google OAuth) |
+| **Payment**          | Stripe (Checkout Sessions + Webhooks)   |
+| **Image Hosting**    | ImgBB API                               |
+| **Animations**       | Framer Motion 12.x                      |
+| **Charts**           | Recharts 3.x                            |
+| **UI Framework**     | Tailwind CSS 4.x + DaisyUI 5.x          |
+| **Icons**            | Lucide React, React Icons               |
+| **Notifications**    | React Hot Toast, React Toastify         |
+| **Deployment**       | Vercel (Frontend + Backend)             |
+| **State Management** | React Hooks (useState, useEffect)       |
 
 ---
 
@@ -190,36 +201,36 @@ The platform administrator. Admins can:
 
 ### Frontend (`arthub`)
 
-| Category         | Package                          | Purpose                              |
-|------------------|----------------------------------|--------------------------------------|
-| **Framework**    | `next@16.2.9`                    | App Router, SSR, routing             |
-| **UI/Styling**   | `tailwindcss@4`, `daisyui@5`     | Utility CSS + component library      |
-| **Animation**    | `framer-motion@12`               | Page & component animations          |
-| **Charts**       | `recharts@3`                     | Admin revenue analytics charts       |
-| **Auth**         | `better-auth@1.6.19`             | Auth client, session, JWT            |
-| **Payment**      | `@stripe/react-stripe-js`, `@stripe/stripe-js` | Stripe frontend integration |
-| **Icons**        | `lucide-react@1.21`, `react-icons@5`, `@gravity-ui/icons@2` | Icon libraries |
-| **Notifications**| `react-hot-toast@2`, `react-toastify@11` | Toast notifications          |
-| **Linting**      | `eslint@9`, `eslint-config-next` | Code quality                         |
+| Category          | Package                                                     | Purpose                         |
+| ----------------- | ----------------------------------------------------------- | ------------------------------- |
+| **Framework**     | `next@16.2.9`                                               | App Router, SSR, routing        |
+| **UI/Styling**    | `tailwindcss@4`, `daisyui@5`                                | Utility CSS + component library |
+| **Animation**     | `framer-motion@12`                                          | Page & component animations     |
+| **Charts**        | `recharts@3`                                                | Admin revenue analytics charts  |
+| **Auth**          | `better-auth@1.6.19`                                        | Auth client, session, JWT       |
+| **Payment**       | `@stripe/react-stripe-js`, `@stripe/stripe-js`              | Stripe frontend integration     |
+| **Icons**         | `lucide-react@1.21`, `react-icons@5`, `@gravity-ui/icons@2` | Icon libraries                  |
+| **Notifications** | `react-hot-toast@2`, `react-toastify@11`                    | Toast notifications             |
+| **Linting**       | `eslint@9`, `eslint-config-next`                            | Code quality                    |
 
 ### Backend (`server`)
 
-| Category         | Package                          | Purpose                              |
-|------------------|----------------------------------|--------------------------------------|
-| **Server**       | `express@5`                      | HTTP server & routing                |
-| **Database**     | `mongodb@7`                      | Native MongoDB driver                |
-| **Auth**         | `better-auth@1.6.19`, `@better-auth/mongo-adapter` | Auth server & DB adapter |
-| **Auth (Legacy)**| `passport@0.7`, `passport-google-oauth20` | Google OAuth support      |
-| **Payment**      | `stripe@22`                      | Stripe Checkout & Webhooks           |
-| **Middleware**   | `cors@2`, `express-session@1`    | CORS, session handling               |
-| **Config**       | `dotenv@17`                      | Environment variable management      |
-
+| Category          | Package                                            | Purpose                         |
+| ----------------- | -------------------------------------------------- | ------------------------------- |
+| **Server**        | `express@5`                                        | HTTP server & routing           |
+| **Database**      | `mongodb@7`                                        | Native MongoDB driver           |
+| **Auth**          | `better-auth@1.6.19`, `@better-auth/mongo-adapter` | Auth server & DB adapter        |
+| **Auth (Legacy)** | `passport@0.7`, `passport-google-oauth20`          | Google OAuth support            |
+| **Payment**       | `stripe@22`                                        | Stripe Checkout & Webhooks      |
+| **Middleware**    | `cors@2`, `express-session@1`                      | CORS, session handling          |
+| **Config**        | `dotenv@17`                                        | Environment variable management |
 
 ---
 
 ## 📁 Folder Structure
 
 ### Frontend
+
 ```
 arthub/
 ├── public/
@@ -290,6 +301,7 @@ arthub/
 ```
 
 ### Backend
+
 ```
 server/
 ├── index.js          # Express app, all API routes
@@ -305,25 +317,14 @@ server/
 ## 🚀 Installation Guide
 
 ### Prerequisites
+
 - Node.js v18+
 - MongoDB Atlas account
 - Stripe account
 - Google Cloud Console project (for OAuth)
 - ImgBB account
 
-### 1. Clone the Repositories
-
-```bash
-# Frontend
-git clone https://github.com/Abid-Hossain-Sifat/ArtHub.git
-cd ArtHub
-
-# Backend (separate terminal)
-git clone https://github.com/Abid-Hossain-Sifat/ArtHub-Server.git
-cd ArtHub-Server
-```
-
-### 2. Install Dependencies
+### 1. Install Dependencies
 
 ```bash
 # Frontend
@@ -335,11 +336,11 @@ cd ArtHub-Server
 npm install
 ```
 
-### 3. Configure Environment Variables
+### 2. Configure Environment Variables
 
 Create `.env` files in both projects (see [Environment Variables](#-environment-variables) section below).
 
-### 4. Run the Backend
+### 3. Run the Backend
 
 ```bash
 cd ArtHub-Server
@@ -347,7 +348,7 @@ npm start
 # Server runs on http://localhost:5000
 ```
 
-### 5. Run the Frontend
+### 4. Run the Frontend
 
 ```bash
 cd ArtHub
@@ -355,7 +356,7 @@ npm run dev
 # Frontend runs on http://localhost:3000
 ```
 
-### 6. Set Up Stripe Webhook (Local Development)
+### 5. Set Up Stripe Webhook (Local Development)
 
 ```bash
 stripe listen --forward-to localhost:5000/webhook
@@ -367,29 +368,29 @@ stripe listen --forward-to localhost:5000/webhook
 
 ### Client (Frontend) — `.env`
 
-| Variable                         | Description                              |
-|----------------------------------|------------------------------------------|
-| `NEXT_PUBLIC_BACKEND_URL`        | Backend base URL (e.g. `http://localhost:5000`) |
-| `NEXT_PUBLIC_API_URL`            | Artworks API endpoint                    |
-| `NEXT_PUBLIC_FILTER_API_URL`     | Artwork filters endpoint                 |
-| `NEXT_PUBLIC_USER_API_URL`       | Users API endpoint                       |
-| `NEXT_PUBLIC_IMGBB_API_KEY`      | ImgBB API key for image uploads          |
-| `NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY` | Stripe publishable key               |
+| Variable                             | Description                                     |
+| ------------------------------------ | ----------------------------------------------- |
+| `NEXT_PUBLIC_BACKEND_URL`            | Backend base URL (e.g. `http://localhost:5000`) |
+| `NEXT_PUBLIC_API_URL`                | Artworks API endpoint                           |
+| `NEXT_PUBLIC_FILTER_API_URL`         | Artwork filters endpoint                        |
+| `NEXT_PUBLIC_USER_API_URL`           | Users API endpoint                              |
+| `NEXT_PUBLIC_IMGBB_API_KEY`          | ImgBB API key for image uploads                 |
+| `NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY` | Stripe publishable key                          |
 
 ### Server (Backend) — `.env`
 
-| Variable                   | Description                                     |
-|----------------------------|-------------------------------------------------|
-| `PORT`                     | Express server port (e.g. `5000`)               |
-| `MONGODB_URI`              | MongoDB Atlas connection string                 |
-| `CLIENT_URL`               | Frontend URL (e.g. `http://localhost:3000`)     |
-| `BETTER_AUTH_URL`          | Backend auth base URL                           |
-| `BETTER_AUTH_SECRET`       | BetterAuth secret key                           |
-| `CLIENT_ID`                | Google OAuth Client ID                          |
-| `CLIENT_SECRET`            | Google OAuth Client Secret                      |
-| `STRIPE_SECRET_KEY`        | Stripe secret key                               |
-| `STRIPE_WEBHOOK_SECRET`    | Stripe webhook signing secret                   |
-| `NODE_ENV`                 | `production` or `development`                   |
+| Variable                | Description                                 |
+| ----------------------- | ------------------------------------------- |
+| `PORT`                  | Express server port (e.g. `5000`)           |
+| `MONGODB_URI`           | MongoDB Atlas connection string             |
+| `CLIENT_URL`            | Frontend URL (e.g. `http://localhost:3000`) |
+| `BETTER_AUTH_URL`       | Backend auth base URL                       |
+| `BETTER_AUTH_SECRET`    | BetterAuth secret key                       |
+| `CLIENT_ID`             | Google OAuth Client ID                      |
+| `CLIENT_SECRET`         | Google OAuth Client Secret                  |
+| `STRIPE_SECRET_KEY`     | Stripe secret key                           |
+| `STRIPE_WEBHOOK_SECRET` | Stripe webhook signing secret               |
+| `NODE_ENV`              | `production` or `development`               |
 
 > ⚠️ **Never commit `.env` files to version control.**
 
@@ -399,67 +400,67 @@ stripe listen --forward-to localhost:5000/webhook
 
 ### Authentication (BetterAuth)
 
-| Method | Endpoint               | Description                        |
-|--------|------------------------|------------------------------------|
-| POST   | `/api/auth/sign-up`    | Register with email & password     |
-| POST   | `/api/auth/sign-in`    | Login with email & password        |
-| POST   | `/api/auth/sign-out`   | Sign out current session           |
-| GET    | `/api/auth/session`    | Get current session & user data    |
-| GET    | `/api/auth/google`     | Initiate Google OAuth login        |
-| GET    | `/api/auth/callback/google` | Google OAuth callback         |
+| Method | Endpoint                    | Description                     |
+| ------ | --------------------------- | ------------------------------- |
+| POST   | `/api/auth/sign-up`         | Register with email & password  |
+| POST   | `/api/auth/sign-in`         | Login with email & password     |
+| POST   | `/api/auth/sign-out`        | Sign out current session        |
+| GET    | `/api/auth/session`         | Get current session & user data |
+| GET    | `/api/auth/google`          | Initiate Google OAuth login     |
+| GET    | `/api/auth/callback/google` | Google OAuth callback           |
 
 ### Artworks
 
-| Method | Endpoint                          | Description                                   |
-|--------|-----------------------------------|-----------------------------------------------|
-| GET    | `/artworks`                       | Get all artworks (search, filter, sort, paginate) |
-| GET    | `/artworks/filters`               | Get available categories and statuses         |
-| POST   | `/artworks`                       | Create a new artwork listing                  |
-| PATCH  | `/artworks/:id`                   | Update artwork details                        |
-| DELETE | `/artworks/:id`                   | Delete an artwork                             |
+| Method | Endpoint            | Description                                       |
+| ------ | ------------------- | ------------------------------------------------- |
+| GET    | `/artworks`         | Get all artworks (search, filter, sort, paginate) |
+| GET    | `/artworks/filters` | Get available categories and statuses             |
+| POST   | `/artworks`         | Create a new artwork listing                      |
+| PATCH  | `/artworks/:id`     | Update artwork details                            |
+| DELETE | `/artworks/:id`     | Delete an artwork                                 |
 
 ### Users
 
-| Method | Endpoint                    | Description                            |
-|--------|-----------------------------|----------------------------------------|
-| GET    | `/user`                     | Get all users (admin)                  |
-| PATCH  | `/user/:id`                 | Update user role (admin)               |
-| PATCH  | `/user/:id/profile`         | Update user profile (cascades across collections) |
-| PATCH  | `/user/:id/subscription`    | Update subscription plan               |
-| GET    | `/artist/:id/stats`         | Get artist statistics                  |
+| Method | Endpoint                 | Description                                       |
+| ------ | ------------------------ | ------------------------------------------------- |
+| GET    | `/user`                  | Get all users (admin)                             |
+| PATCH  | `/user/:id`              | Update user role (admin)                          |
+| PATCH  | `/user/:id/profile`      | Update user profile (cascades across collections) |
+| PATCH  | `/user/:id/subscription` | Update subscription plan                          |
+| GET    | `/artist/:id/stats`      | Get artist statistics                             |
 
 ### Payments (Stripe)
 
-| Method | Endpoint                             | Description                          |
-|--------|--------------------------------------|--------------------------------------|
-| POST   | `/create-checkout/artwork/:id`       | Create Stripe session for artwork    |
-| POST   | `/create-checkout/subscription`      | Create Stripe session for plan       |
-| GET    | `/verify-payment/:sessionId`         | Verify Stripe payment status         |
-| POST   | `/webhook`                           | Stripe webhook event handler         |
+| Method | Endpoint                        | Description                       |
+| ------ | ------------------------------- | --------------------------------- |
+| POST   | `/create-checkout/artwork/:id`  | Create Stripe session for artwork |
+| POST   | `/create-checkout/subscription` | Create Stripe session for plan    |
+| GET    | `/verify-payment/:sessionId`    | Verify Stripe payment status      |
+| POST   | `/webhook`                      | Stripe webhook event handler      |
 
 ### Purchase History
 
-| Method | Endpoint              | Description                                      |
-|--------|-----------------------|--------------------------------------------------|
-| GET    | `/purchasehistory`    | Get purchases (filtered by `buyerId` or `artistId`) |
-| POST   | `/purchase/:id`       | Direct purchase (non-Stripe flow)                |
+| Method | Endpoint           | Description                                         |
+| ------ | ------------------ | --------------------------------------------------- |
+| GET    | `/purchasehistory` | Get purchases (filtered by `buyerId` or `artistId`) |
+| POST   | `/purchase/:id`    | Direct purchase (non-Stripe flow)                   |
 
 ### Comments
 
-| Method | Endpoint                    | Description                         |
-|--------|-----------------------------|-------------------------------------|
-| POST   | `/comments`                 | Post a comment on an artwork        |
-| GET    | `/comments/:artworkId`      | Get all comments for an artwork     |
-| GET    | `/comments/user/:userId`    | Get all comments by a user (with artwork info) |
+| Method | Endpoint                 | Description                                    |
+| ------ | ------------------------ | ---------------------------------------------- |
+| POST   | `/comments`              | Post a comment on an artwork                   |
+| GET    | `/comments/:artworkId`   | Get all comments for an artwork                |
+| GET    | `/comments/user/:userId` | Get all comments by a user (with artwork info) |
 
 ### Transactions & Analytics
 
-| Method | Endpoint                   | Description                                        |
-|--------|----------------------------|----------------------------------------------------|
-| GET    | `/transactions`            | All transactions (purchases + subscriptions)       |
-| GET    | `/transactions/daily`      | Daily revenue data grouped by date (for charts)    |
-| GET    | `/subscription-history`    | Subscription plan change history                   |
-| PATCH  | `/sync-purchases`          | Sync monthly purchase counts across all users      |
+| Method | Endpoint                | Description                                     |
+| ------ | ----------------------- | ----------------------------------------------- |
+| GET    | `/transactions`         | All transactions (purchases + subscriptions)    |
+| GET    | `/transactions/daily`   | Daily revenue data grouped by date (for charts) |
+| GET    | `/subscription-history` | Subscription plan change history                |
+| PATCH  | `/sync-purchases`       | Sync monthly purchase counts across all users   |
 
 ---
 
@@ -468,6 +469,7 @@ stripe listen --forward-to localhost:5000/webhook
 ArtHub uses **BetterAuth v1.6.19** — a modern, framework-agnostic authentication library.
 
 ### Email & Password
+
 1. User submits signup form → BetterAuth creates user in MongoDB
 2. A `databaseHook` fires `after` creation → assigns default `free` subscription
 3. User role defaults to `user`
@@ -475,17 +477,20 @@ ArtHub uses **BetterAuth v1.6.19** — a modern, framework-agnostic authenticati
 5. In production, cookies use `SameSite: None; Secure: true` for cross-origin support
 
 ### Google OAuth
+
 1. User clicks "Continue with Google" → redirected to `/api/auth/google`
 2. BetterAuth handles the OAuth dance using `CLIENT_ID` and `CLIENT_SECRET`
 3. On callback, BetterAuth creates or retrieves the user in MongoDB
 4. Same JWT session flow applies
 
 ### JWT Plugin
+
 - BetterAuth's `jwt()` plugin is enabled with `cookieCache` (max age 7 days)
 - Frontend uses `jwtClient()` plugin to access and use the token
 - `inferAdditionalFields()` pulls custom fields (`role`, `subscription`) into the session
 
 ### Protected Routes
+
 - Frontend checks `authClient.useSession()` — unauthenticated users are redirected to `/sign-in`
 - Role-based redirects: accessing `/dashboard/admin` as a non-admin sends to `/unauthorized`
 - Backend validates `buyerId`, `artistId`, and role before processing sensitive operations
@@ -495,6 +500,7 @@ ArtHub uses **BetterAuth v1.6.19** — a modern, framework-agnostic authenticati
 ## 💰 Payment Flow
 
 ### Artwork Purchase
+
 1. Buyer clicks "Purchase" on an artwork detail page
 2. Frontend calls `POST /create-checkout/artwork/:id` with buyer details
 3. Server validates: artwork exists, not already sold, buyer has subscription, monthly limit not reached, buyer is not the artist
@@ -505,12 +511,14 @@ ArtHub uses **BetterAuth v1.6.19** — a modern, framework-agnostic authenticati
 8. Buyer is redirected to `/payment-success` with `session_id` for verification
 
 ### Subscription Upgrade
+
 1. Buyer selects a plan (Pro or Premium) on the Subscription page
 2. Frontend calls `POST /create-checkout/subscription` with `userId` and `plan`
 3. Server creates a Stripe Checkout Session for the plan price
 4. On Stripe webhook `checkout.session.completed`: user's subscription is updated, history is logged with `previousPlan` → `newPlan`
 
 ### Transaction IDs
+
 - Purchase: `AH-P-` + last 6 chars of artwork ObjectId (uppercase)
 - Subscription: `AH-S-` + last 6 chars of user ObjectId (uppercase)
 
@@ -519,32 +527,35 @@ ArtHub uses **BetterAuth v1.6.19** — a modern, framework-agnostic authenticati
 ## 📊 Dashboard Overview
 
 ### 🛍️ Buyer Dashboard
-| Page              | Description                                              |
-|-------------------|----------------------------------------------------------|
-| Overview          | Welcome screen with subscription status and quick stats  |
-| Subscription      | Upgrade plan (Free → Pro → Premium) via Stripe          |
-| Purchase History  | Table of all purchases with transaction IDs              |
-| Bought Artworks   | Gallery view of purchased artworks                       |
-| My Comments       | All comments the user has posted with artwork previews   |
-| Profile           | Edit name, email, avatar (ImgBB upload)                  |
+
+| Page             | Description                                             |
+| ---------------- | ------------------------------------------------------- |
+| Overview         | Welcome screen with subscription status and quick stats |
+| Subscription     | Upgrade plan (Free → Pro → Premium) via Stripe          |
+| Purchase History | Table of all purchases with transaction IDs             |
+| Bought Artworks  | Gallery view of purchased artworks                      |
+| My Comments      | All comments the user has posted with artwork previews  |
+| Profile          | Edit name, email, avatar (ImgBB upload)                 |
 
 ### 🎨 Artist Dashboard
-| Page              | Description                                              |
-|-------------------|----------------------------------------------------------|
-| Overview          | Stats: total artworks listed, total artworks sold        |
-| Add Artwork       | Form to create a new listing with ImgBB image upload     |
-| Manage Artworks   | Table of own artworks with edit and delete actions       |
-| Sales History     | Record of sold artworks with buyer info and sale date    |
-| Profile           | Edit name, email, avatar (cascades to all artworks)      |
+
+| Page            | Description                                           |
+| --------------- | ----------------------------------------------------- |
+| Overview        | Stats: total artworks listed, total artworks sold     |
+| Add Artwork     | Form to create a new listing with ImgBB image upload  |
+| Manage Artworks | Table of own artworks with edit and delete actions    |
+| Sales History   | Record of sold artworks with buyer info and sale date |
+| Profile         | Edit name, email, avatar (cascades to all artworks)   |
 
 ### 🛡️ Admin Dashboard
-| Page              | Description                                              |
-|-------------------|----------------------------------------------------------|
-| Overview          | Daily revenue chart (artwork + subscription) via Recharts |
-| Manage Users      | Table of all users with role update (promote/demote)     |
-| Manage Artworks   | Full platform artwork control with delete capability     |
-| All Transactions  | Combined purchase + subscription transaction history     |
-| Profile           | Edit admin profile                                       |
+
+| Page             | Description                                               |
+| ---------------- | --------------------------------------------------------- |
+| Overview         | Daily revenue chart (artwork + subscription) via Recharts |
+| Manage Users     | Table of all users with role update (promote/demote)      |
+| Manage Artworks  | Full platform artwork control with delete capability      |
+| All Transactions | Combined purchase + subscription transaction history      |
+| Profile          | Edit admin profile                                        |
 
 ---
 
@@ -562,18 +573,18 @@ Responsive behavior is implemented using **Tailwind CSS 4** responsive prefixes 
 
 ## 🛡️ Security Features
 
-| Feature                   | Implementation                                        |
-|---------------------------|-------------------------------------------------------|
-| **JWT Authentication**    | 7-day tokens via BetterAuth JWT plugin, `HttpOnly` cookies |
-| **Secure Cookies**        | `SameSite: None; Secure: true` in production          |
-| **CORS**                  | Origin-whitelisted to `CLIENT_URL` only               |
-| **Role Validation**       | Backend checks user role before every sensitive operation |
-| **Purchase Guards**       | Artist cannot buy own artwork; artists cannot purchase at all |
-| **Subscription Enforcement** | Monthly purchase limits validated server-side before checkout |
-| **Stripe Webhook Verification** | `stripe.webhooks.constructEvent()` verifies signature |
-| **Input Validation**      | Required fields checked before all DB writes           |
-| **Environment Variables** | All secrets stored in `.env`, never committed          |
-| **ObjectId Validation**   | `ObjectId.isValid()` checked before all MongoDB queries |
+| Feature                         | Implementation                                                |
+| ------------------------------- | ------------------------------------------------------------- |
+| **JWT Authentication**          | 7-day tokens via BetterAuth JWT plugin, `HttpOnly` cookies    |
+| **Secure Cookies**              | `SameSite: None; Secure: true` in production                  |
+| **CORS**                        | Origin-whitelisted to `CLIENT_URL` only                       |
+| **Role Validation**             | Backend checks user role before every sensitive operation     |
+| **Purchase Guards**             | Artist cannot buy own artwork; artists cannot purchase at all |
+| **Subscription Enforcement**    | Monthly purchase limits validated server-side before checkout |
+| **Stripe Webhook Verification** | `stripe.webhooks.constructEvent()` verifies signature         |
+| **Input Validation**            | Required fields checked before all DB writes                  |
+| **Environment Variables**       | All secrets stored in `.env`, never committed                 |
+| **ObjectId Validation**         | `ObjectId.isValid()` checked before all MongoDB queries       |
 
 ---
 
@@ -609,23 +620,6 @@ Responsive behavior is implemented using **Tailwind CSS 4** responsive prefixes 
 14. **Internationalization (i18n)** — Multi-language support for global reach
 15. **SEO Optimization** — Dynamic `og:image` and metadata per artwork for social sharing
 
----
-
-## 👨‍💻 Developer
-
-<div align="center">
-
-**Abid Hossain Sifat**
-Full Stack MERN Developer
-
-[![GitHub](https://img.shields.io/badge/GitHub-Abid--Hossain--Sifat-181717?style=for-the-badge&logo=github)](https://github.com/Abid-Hossain-Sifat)
-
-*Built with ❤️ using Next.js, Express, MongoDB, and Stripe*
-
-</div>
-
----
-
 ## 📄 License
 
 This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
@@ -633,7 +627,7 @@ This project is licensed under the **MIT License** — see the [LICENSE](LICENSE
 ```
 MIT License
 
-Copyright (c) 2025 Abid Hossain Sifat
+Copyright (c) 2025 Rakibul hasan reday
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
