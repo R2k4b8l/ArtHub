@@ -646,8 +646,8 @@ copies or substantial portions of the Software.
 
 ⭐ **If you found this project helpful, please give it a star!** ⭐
 
-[🌐 Live Demo](https://arthub-by-abid.vercel.app) &nbsp;|&nbsp;
-[📁 Frontend Repo](https://github.com/Abid-Hossain-Sifat/ArtHub) &nbsp;|&nbsp;
-[🔧 Backend Repo](https://github.com/Abid-Hossain-Sifat/ArtHub-Server)
+[🌐 Live Demo](https://arthub-ruddy.vercel.app/) &nbsp;|&nbsp;
+[📁 Frontend Repo](https://github.com/R2k4b8l/ArtHub) &nbsp;|&nbsp;
+[🔧 Backend Repo](https://github.com/R2k4b8l/ArtHub-Server)
 
 </div>
